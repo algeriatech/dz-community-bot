@@ -1,0 +1,11 @@
+node_modules
+
+# IDE
+*.iml
+.idea
+
+# Log files
+*.log
+
+# Environment file
+.env

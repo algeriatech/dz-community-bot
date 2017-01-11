@@ -1,0 +1,21 @@
+{
+  "name": "dz-community-bot",
+  "version": "0.1.0",
+  "description": "A Slack bot for algeriatech.slack.com",
+  "private": true,
+  "main": "src/go.js",
+  "repository": "https://github.com/IOAyman/dz-community-bot",
+  "author": "Ayman Nedjmeddine <theycallmethedr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/go",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "botkit": "^0.4.9",
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1"
+  }
+}
