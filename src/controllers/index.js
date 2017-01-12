@@ -16,8 +16,13 @@ const greetings = (bot, msg) => {
   bot.reply(msg, `mar7ba biiiik <@${msg.user}> :smile:\n3arrefna biik f le canal <#chkoun> :wink:`)
 }
 
+const whoami = (bot, msg) => {
+  bot.reply(msg, `<@${msg.user}>: Je suis l'ange gardien de cette communauté :innocent:`)
+}
+
 
 module.exports = {
   devToken,
   greetings,
+  whoami,
 }

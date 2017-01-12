@@ -30,3 +30,5 @@ bot.startRTM(err => { if (err) throw new Error('Cannot connect to Slack!') })
 controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], controllers.devToken)
 // say hi to new comers
 controller.hears(patterns.SALUTATIONS, [events.NO_MENTION, events.USER_TEAM_JOIN], controllers.greetings)
+// who am I?
+controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], controllers.whoami)
