@@ -15,7 +15,7 @@ const devToken = (bot, msg) => {
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  bot.reply(msg, `mar7ba biiiik <@${msg.user}> :smile:\n3arrefna biik f le canal <#chkoun> :wink:`)
+  bot.reply(msg, `mar7ba biiiik <@${msg.user}> :smile:\n3arrefna biik f le canal <#C3PG4274M> :wink:`)
 }
 
 const whoami = (bot, msg) => {
