@@ -26,5 +26,7 @@ const bot = controller.spawn({ token: process.env.API_TOKEN })
 bot.startRTM(err => { if (err) throw new Error('Cannot connect to Slack!') })
 
 
+// dev token requested
+controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], controllers.devToken)
 // say hi to new comers
 controller.hears(patterns.SALUTATIONS, [events.NO_MENTION, events.USER_TEAM_JOIN], controllers.greetings)
