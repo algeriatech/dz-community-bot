@@ -10,6 +10,9 @@
     "linebreak-style": [ "warn", "unix" ],
     "quotes": [ "error", "single" ],
     "semi": [ "error", "never" ],
-    "valid-jsdoc": [ "warn", { "requireReturn": false } ]
+    "valid-jsdoc": [ "warn", { "requireReturn": false } ],
+    "comma-dangle": [
+      "warn", { "arrays": "always-multiline", "objects": "always-multiline" }
+    ]
   }
 }

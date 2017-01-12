@@ -3,10 +3,24 @@
   "version": "0.1.0",
   "description": "A Slack bot for algeriatech.slack.com",
   "private": true,
-  "main": "src/go.js",
-  "repository": "https://github.com/IOAyman/dz-community-bot",
   "author": "Ayman Nedjmeddine <theycallmethedr@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IOAyman/dz-community-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IOAyman/dz-community-bot/issues"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/IOAyman/dz-community-bot#dz-community-bot-",
+  "keywords": [
+    "bot",
+    "slack",
+    "dz",
+    "algeria",
+    "community"
+  ],
+  "main": "src/go.js",
   "scripts": {
     "start": "node src/go",
     "lint": "eslint ."

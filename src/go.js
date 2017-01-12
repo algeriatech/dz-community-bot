@@ -16,7 +16,7 @@ const controller = slackbot({
   debug           : process.env.NODE_ENV === 'development',
   retry           : 3,
   require_delivery: false,
-  stats_optout    : true
+  stats_optout    : true,
 })
 
 // build a bot
