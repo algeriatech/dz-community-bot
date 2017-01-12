@@ -10,6 +10,6 @@
     "linebreak-style": [ "warn", "unix" ],
     "quotes": [ "error", "single" ],
     "semi": [ "error", "never" ],
-    "valid-jsdoc": [ "warn" ]
+    "valid-jsdoc": [ "warn", { "requireReturn": false } ]
   }
 }
