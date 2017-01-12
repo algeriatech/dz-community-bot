@@ -1,0 +1,8 @@
+node_modules
+*.log
+.env.sample
+.github
+.gitignore
+.editorconfig
+.eslintrc.json
+README.md
