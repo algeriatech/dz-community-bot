@@ -9,7 +9,7 @@ But most importantly, keep the atmosphere cool and echo some jokes every now and
 Our imagination and determination are the only limits to where this can lead :wink:
 
 
-# Getting Started
+## Getting Started
 1. Fork and clone the repository  
 `git clone git@github.com:USERNAME/dz-community-bot.git`
 2. Install the dependencies  
@@ -22,6 +22,9 @@ Use the [#test-bot] channel to do your tests or create your own private channel,
 `npm run lint`
 6. Commit and push your changes, then open up a pull request :rocket:
 
+## Useful links
+- [BotKit docs](https://github.com/howdyai/botkit/blob/master/readme-slack.md)
+- [Slack API docs](https://api.slack.com/)
 
 
 [@iobot]: https://algeriatech.slack.com/messages/@iobot/
