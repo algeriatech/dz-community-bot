@@ -1,8 +1,8 @@
-const loadEnv      = require('dotenv').config
+const loadEnv = require('dotenv').config
 const { slackbot } = require('botkit')
-const events       = require('./lib/events.js')
-const patterns     = require('./lib/constants.js')
-const controllers  = require('./controllers')
+const events = require('./lib/events.js')
+const patterns = require('./lib/constants.js')
+const controllers = require('./controllers')
 
 
 // load loadEnv

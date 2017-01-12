@@ -1,4 +1,5 @@
-const moment = require( 'moment' )
+const moment = require('moment')
+const { USER_ALREADY_INTRODUCED } = require('../lib/constants')
 
 /**
  * Send a development token
@@ -15,7 +16,17 @@ const devToken = (bot, msg) => {
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  bot.reply(msg, `mar7ba biiiik <@${msg.user}> :smile:\n3arrefna biik f le canal <#C3PG4274M> :wink:`)
+  let m = `mar7ba biiiik <@${msg.user}> :smile:`
+
+  // user has not already introduced himself
+  if (!USER_ALREADY_INTRODUCED.test(msg.text))
+    m += ' 3arrefna biik sadi9i'
+
+  // this is NOT being posted to #chkoun
+  if (msg.channel !== 'C3PG4274M') // tag:nasty
+    m += ' f le canal <#C3PG4274M> :wink:'
+
+  bot.reply(msg, m)
 }
 
 const whoami = (bot, msg) => {
