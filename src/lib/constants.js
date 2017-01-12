@@ -7,9 +7,13 @@ const SALUTATIONS = [
 const WHOAMI = [
   /^who|qui|pr[eé]sente?|[cs]hkoun.*/i,
 ]
+const WEEKEND = [
+  /week\-?end/i,
+]
 
 module.exports = {
   TOKEN,
   SALUTATIONS,
+  WEEKEND,
   WHOAMI,
 }

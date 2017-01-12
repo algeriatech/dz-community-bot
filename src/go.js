@@ -33,3 +33,5 @@ controller.hears(patterns.SALUTATIONS,
   [events.NO_MENTION, events.USER_TEAM_JOIN, events.MENTION_DIRECT, events.MENTION], controllers.greetings)
 // who am I?
 controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], controllers.whoami)
+// Is it the weekend?
+controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], controllers.isItTheWeekend)
