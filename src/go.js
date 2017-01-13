@@ -18,7 +18,7 @@ if (!process.env.API_TOKEN)
 const controller = slackbot({
   debug           : process.env.NODE_ENV === 'development',
   retry           : 3,
-  require_delivery: false,
+  require_delivery: true,
   stats_optout    : true,
 })
 
@@ -28,12 +28,11 @@ const bot = controller.spawn({ token: process.env.API_TOKEN })
 // wake up the bot
 bot.startRTM(err => { if (err) throw new Error('Cannot connect to Slack!') })
 
-
 // Dev
 controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], devCtrl.devToken)
+// Welcome
+controller.on(events.USER_TEAM_JOIN, presentationCtrl.greetings)
 // Presentation
-controller.hears(patterns.SALUTATIONS,
-  [events.NO_MENTION, events.USER_TEAM_JOIN, events.MENTION_DIRECT, events.MENTION], presentationCtrl.greetings)
 controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], presentationCtrl.whoami)
 // Daily
 controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dailyCtrl.isItTheWeekend)

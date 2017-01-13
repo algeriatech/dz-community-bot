@@ -1,23 +1,19 @@
-const { USER_ALREADY_INTRODUCED } = require('../lib/constants')
-
-
 /**
  * Say hi
  * @param {bot} bot The bot to reply with
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  let m = `mar7ba biiiik <@${msg.user}> :smile:`
-
-  // user has not already introduced himself
-  if (!USER_ALREADY_INTRODUCED.test(msg.text))
-    m += ' 3arrefna biik sadi9i'
-
-  // this is NOT being posted to #chkoun
-  if (msg.channel !== 'C3PG4274M') // tag:nasty
-    m += ' f le canal <#C3PG4274M> :wink:'
-
-  bot.reply(msg, m)
+  bot.startPrivateConversation({ user: msg.user.id }, function(err,convo) {
+    convo.say(`mar7ba biiiik <@${msg.user}> :smile:!`)
+    convo.say('Je suis <@iobot> le gardien de la communauté tech algérienne.')
+    convo.say('Quelques petites règles à connaitre avant de rejoindre la mélée:')
+    convo.say('La règle d\'or: il faut rester courtois avec tous les membres et voici les règles de bonne conduite https://github.com/youknowriad/awesome-algeria/blob/master/CODE-OF-CONDUCT.md')
+    convo.say('Maintenant commence par te présenter sur le channel <#C3PG4274M>')
+    convo.say('Tu peux discuter de tout sur le channel <#C3NN38PFS>')
+    convo.say('Et si tu as besoin d\'aide sur le fonctionnement de cette team slack, pose ta question sur <#C3NNYRB5F>')
+    convo.say('Aller, je te laisse et bienvenue parmi nous')
+  })
 }
 
 /**
