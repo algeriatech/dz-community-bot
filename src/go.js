@@ -1,4 +1,5 @@
 const loadEnv = require('dotenv').config
+const logger = require('./util/logger')
 const { slackbot } = require('botkit')
 const events = require('./lib/events.js')
 const patterns = require('./lib/constants.js')
@@ -9,10 +10,14 @@ const dailyCtrl = require('./controllers/daily')
 
 
 // load loadEnv
-if (loadEnv().error)
+if (loadEnv().error) {
+  logger.error('Could not load env')
   throw new Error('Could not load env')
-if (!process.env.API_TOKEN)
+}
+if (!process.env.API_TOKEN) {
+  logger.fatal('API_TOKEN not found in process.env')
   throw new Error('I need a API token! Grab one at https://my.slack.com/services/new/bot')
+}
 
 // setup
 const controller = slackbot({
@@ -26,7 +31,14 @@ const controller = slackbot({
 const bot = controller.spawn({ token: process.env.API_TOKEN })
 
 // wake up the bot
-bot.startRTM(err => { if (err) throw new Error('Cannot connect to Slack!') })
+bot.startRTM(err => {
+  logger.debug('Starting the bot')
+
+  if (err) {
+    logger.fatal(err)
+    throw new Error('Cannot connect to Slack!')
+  }
+})
 
 // Dev
 controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], devCtrl.devToken)
