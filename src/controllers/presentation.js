@@ -1,14 +1,10 @@
-const { USER_ALREADY_INTRODUCED } = require('../lib/constants')
-
-
-
 /**
  * Say hi
  * @param {bot} bot The bot to reply with
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  bot.startPrivateConversation(msg, function(err,convo) {
+  bot.startPrivateConversation({ user: msg.user.id }, function(err,convo) {
     convo.say(`mar7ba biiiik <@${msg.user}> :smile:!`)
     convo.say('Je suis <@iobot> le gardien de la communauté tech algérienne.')
     convo.say('Quelques petites règles à connaitre avant de rejoindre la mélée:')
