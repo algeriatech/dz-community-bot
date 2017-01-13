@@ -18,7 +18,7 @@ if (!process.env.API_TOKEN)
 const controller = slackbot({
   debug           : process.env.NODE_ENV === 'development',
   retry           : 3,
-  require_delivery: false,
+  require_delivery: true,
   stats_optout    : true,
 })
 
