@@ -10,10 +10,8 @@ const dailyCtrl = require('./controllers/daily')
 
 
 // load loadEnv
-if (loadEnv().error) {
+if (loadEnv().error)
   logger.error('Could not load env')
-  throw new Error('Could not load env')
-}
 if (!process.env.API_TOKEN) {
   logger.fatal('API_TOKEN not found in process.env')
   throw new Error('I need a API token! Grab one at https://my.slack.com/services/new/bot')
