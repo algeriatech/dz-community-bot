@@ -2,7 +2,10 @@ const loadEnv = require('dotenv').config
 const { slackbot } = require('botkit')
 const events = require('./lib/events.js')
 const patterns = require('./lib/constants.js')
-const controllers = require('./controllers')
+// controllers
+const devCtrl = require('./controllers/dev')
+const presentationCtrl = require('./controllers/presentation')
+const dailyCtrl = require('./controllers/daily')
 
 
 // load loadEnv
@@ -26,12 +29,11 @@ const bot = controller.spawn({ token: process.env.API_TOKEN })
 bot.startRTM(err => { if (err) throw new Error('Cannot connect to Slack!') })
 
 
-// dev token requested
-controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], controllers.devToken)
-// say hi to new comers
+// Dev
+controller.hears(patterns.TOKEN, [events.MESSAGE_DIRECT], devCtrl.devToken)
+// Presentation
 controller.hears(patterns.SALUTATIONS,
-  [events.NO_MENTION, events.USER_TEAM_JOIN, events.MENTION_DIRECT, events.MENTION], controllers.greetings)
-// who am I?
-controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], controllers.whoami)
-// Is it the weekend?
-controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], controllers.isItTheWeekend)
+  [events.NO_MENTION, events.USER_TEAM_JOIN, events.MENTION_DIRECT, events.MENTION], presentationCtrl.greetings)
+controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], presentationCtrl.whoami)
+// Daily
+controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dailyCtrl.isItTheWeekend)
