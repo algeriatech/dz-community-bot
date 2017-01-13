@@ -13,15 +13,9 @@ const WEEKEND = [
   /week\-?end/i,
 ]
 
-
-// other patterns
-const USER_ALREADY_INTRODUCED = /suis|am|\'m/i
-
-
 module.exports = {
   TOKEN,
   SALUTATIONS,
   WEEKEND,
   WHOAMI,
-  USER_ALREADY_INTRODUCED,
 }
