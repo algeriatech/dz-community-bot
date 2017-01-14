@@ -6,7 +6,7 @@ const patterns = require('./lib/constants.js')
 const devCtrl = require('./controllers/dev')
 const presentationCtrl = require('./controllers/presentation')
 const dailyCtrl = require('./controllers/daily')
-
+const dyalnaCtrl = require('./controllers/dyalna')
 
 // load loadEnv
 if (loadEnv().error)
@@ -36,3 +36,5 @@ controller.on(events.USER_TEAM_JOIN, presentationCtrl.greetings)
 controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], presentationCtrl.whoami)
 // Daily
 controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dailyCtrl.isItTheWeekend)
+// News
+controller.hears(patterns.NEWS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.news)

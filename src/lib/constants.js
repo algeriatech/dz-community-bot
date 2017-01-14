@@ -12,10 +12,14 @@ const WHOAMI = [
 const WEEKEND = [
   /week\-?end/i,
 ]
+const NEWS = [
+  /\b(news|sari|sary|sra|sar|akhbar|informations?)\b/i,
+]
 
 module.exports = {
   TOKEN,
   SALUTATIONS,
   WEEKEND,
   WHOAMI,
+  NEWS,
 }

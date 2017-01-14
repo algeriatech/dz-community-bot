@@ -29,7 +29,8 @@
   "dependencies": {
     "botkit": "^0.4.9",
     "dotenv": "^4.0.0",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "superagent": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^3.13.1"
