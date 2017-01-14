@@ -10,7 +10,6 @@ const news = (bot, msg) => {
         data.body.forEach(post => {
           convo.say({
             'attachments' : [{
-              'fallback': 'Required placeholder for news summary.',
               'color': '#36a64f',
               'author_name': 'Dyalna Top News',
               'author_link': 'dyalna.com',
@@ -18,9 +17,8 @@ const news = (bot, msg) => {
               'title_link': `https://dyalna.com/post/show/${ post.slug }`,
               'thumb_url': `${ post.picture }`,
               'footer': 'Dyalna.com',
-              'footer_icon': 'https://www.dyalna.com/favicon.ico?2'
+              'footer_icon': 'https://www.dyalna.com/favicon.ico?2',
             }],
-            'unfurl_links': false
           })
         })
       })
@@ -29,5 +27,5 @@ const news = (bot, msg) => {
 
 
 module.exports = {
-  news
+  news,
 }
