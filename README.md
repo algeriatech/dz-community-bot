@@ -1,6 +1,12 @@
 # DZ Community Bot 🤖
 > A bot for AlgeriaTech.slack.com
 
+[![Build Status](https://travis-ci.org/boennemann/badges.svg?branch=master)](https://travis-ci.org/algeriatech/dz-community-bot)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
+
+
 The goal of this project is to invite the community to collaborate on building something useful and fun.
 The bot should welcome new members of the team and keep the community active in different ways (news, debates,
 job offers, AI-powered interviews/quiz/games ...etc).
