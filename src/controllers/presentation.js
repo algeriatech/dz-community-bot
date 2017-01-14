@@ -7,9 +7,9 @@ const logger = require('../util/logger')
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  logger.info(`welcoming user @${msg.user}`)
+  logger.info(`welcoming user ${msg.user.real_name} (@${msg.user.id})`)
 
-  bot.startPrivateConversation({ user: msg.user.id }, function(err,convo) {
+  bot.startPrivateConversation({ user: msg.user.id }, function(err, convo) {
     logger.debug(`starting conversation with @${msg.user}`)
 
     convo.say(`mar7ba biiiik <@${msg.user}> :smile:!`)
