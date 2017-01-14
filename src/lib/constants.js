@@ -16,10 +16,16 @@ const NEWS = [
   /\b(news|sari|sary|sra|sar|akhbar|informations?)\b/i,
 ]
 
+const JOBS = [
+  /\b(kh(e|a|)d(e|)ma|jobs?|boulots?)\b/i,
+]
+
+
 module.exports = {
   TOKEN,
   SALUTATIONS,
   WEEKEND,
   WHOAMI,
   NEWS,
+  JOBS,
 }
