@@ -16,6 +16,7 @@ const news = (bot, msg) => {
               'title': `${ data.body[i].title }`,
               'title_link': `https://dyalna.com/post/show/${ data.body[i].slug }`,
               'thumb_url': `${ data.body[i].picture }`,
+
               'footer': 'Dyalna.com',
               'footer_icon': 'https://www.dyalna.com/favicon.ico?2',
             }],

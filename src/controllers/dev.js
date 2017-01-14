@@ -1,3 +1,6 @@
+const logger = require('../util/logger')
+
+
 /**
  * Send a development token
  * @param {bot} bot The bot to reply with
@@ -12,6 +15,7 @@ const devToken = (bot, msg) => {
 Please use is wisely :wink:`
 
   bot.reply(msg, m)
+  logger.info(`User @${msg.user} has asked for a token`)
 }
 
 

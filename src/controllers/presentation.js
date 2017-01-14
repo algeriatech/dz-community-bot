@@ -1,10 +1,17 @@
+const logger = require('../util/logger')
+
+
 /**
  * Say hi
  * @param {bot} bot The bot to reply with
  * @param {string|object} msg The message to send back
  */
 const greetings = (bot, msg) => {
-  bot.startPrivateConversation({ user: msg.user.id }, function(err,convo) {
+  logger.info(`welcoming user ${msg.user.real_name} (@${msg.user.id})`)
+
+  bot.startPrivateConversation({ user: msg.user.id }, function(err, convo) {
+    logger.debug(`starting conversation with @${msg.user}`)
+
     convo.say(`mar7ba biiiik <@${msg.user}> :smile:!`)
     convo.say('Je suis <@iobot> le gardien de la communauté tech algérienne.')
     convo.say('Quelques petites règles à connaitre avant de rejoindre la mélée:')
