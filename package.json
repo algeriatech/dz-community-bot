@@ -29,7 +29,9 @@
   "dependencies": {
     "botkit": "^0.4.9",
     "dotenv": "^4.0.0",
+    "install": "^0.8.4",
     "moment": "^2.17.1",
+    "npm": "^4.1.1",
     "superagent": "^3.3.2"
   },
   "devDependencies": {

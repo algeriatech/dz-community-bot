@@ -38,3 +38,5 @@ controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events
 controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dailyCtrl.isItTheWeekend)
 // News
 controller.hears(patterns.NEWS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.news)
+
+controller.hears(patterns.JOBS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.jobs)
