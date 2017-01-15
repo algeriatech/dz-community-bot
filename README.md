@@ -36,7 +36,6 @@ You should be able to use the [#test-bot] channel to do your tests or create you
 `npm run lint`
 2. Commit and push your changes, then open up a pull request :rocket:
 
-
 ## Troubleshooting
 
 1. if you have this error :
