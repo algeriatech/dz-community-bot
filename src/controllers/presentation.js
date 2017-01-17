@@ -15,7 +15,7 @@ const greetings = (bot, msg) => {
     convo.say(`mar7ba biiiik <@${msg.user}> :smile:!`)
     convo.say('Je suis <@iobot> le gardien de la communauté tech algérienne.')
     convo.say('Quelques petites règles à connaitre avant de rejoindre la mélée:')
-    convo.say('La règle d\'or: il faut rester courtois avec tous les membres et voici les [règles de bonne conduite](https://github.com/algeriatech/awesome-algeria/blob/master/AT-COMMUNITY-CODE-OF-CONDUCT.md)')
+    convo.say('La règle d\'or: il faut rester courtois avec tous les membres et voici les règles de bonne conduite https://github.com/algeriatech/awesome-algeria/blob/master/AT-COMMUNITY-CODE-OF-CONDUCT.md')
     convo.say('Maintenant commence par te présenter sur le channel <#C3PG4274M>')
     convo.say('Tu peux discuter de tout sur le channel <#C3NN38PFS>')
     convo.say('Et si tu as besoin d\'aide sur le fonctionnement de cette team slack, pose ta question sur <#C3NNYRB5F>')
