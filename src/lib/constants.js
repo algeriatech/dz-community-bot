@@ -20,6 +20,10 @@ const JOBS = [
   /\b(kh(e|a|)d(e|)ma|jobs?|boulots?)\b/i,
 ]
 
+const JOKES = [
+  /\b((e|a)(7|h)k(i|)li|jokes?|d(a|)(7|h)akni|(7|h)ajini|rire|blague|laught)\b/i,
+]
+
 
 module.exports = {
   TOKEN,
@@ -28,4 +32,5 @@ module.exports = {
   WHOAMI,
   NEWS,
   JOBS,
+  JOKES,
 }

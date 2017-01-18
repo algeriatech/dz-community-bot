@@ -1084,6 +1084,10 @@ joi@^6.10.1:
     moment "2.x.x"
     topo "1.x.x"
 
+jokes.dz@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/jokes.dz/-/jokes.dz-0.1.0.tgz#1a285a7e3b4b6854b2d7df1b15fe9331e52f8360"
+
 js-tokens@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-2.0.0.tgz#79903f5563ee778cc1162e6dcf1a0027c97f9cb5"
