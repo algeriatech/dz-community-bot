@@ -21,7 +21,7 @@ const JOBS = [
 ]
 
 const JOKES = [
-  /\b((e|a)(7|h)k(i|)li|jokes?|d(a|)(7|h)akni|(7|h)ajini)\b/i,
+  /\b((e|a)(7|h)k(i|)li|jokes?|d(a|)(7|h)akni|(7|h)ajini|rire|blague|laught)\b/i,
 ]
 
 
