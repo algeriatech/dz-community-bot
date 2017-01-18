@@ -1,13 +1,14 @@
-const loadEnv = require('dotenv').config
-const logger = require('./util/logger')
-const { slackbot } = require('botkit')
-const events = require('./lib/events.js')
-const patterns = require('./lib/constants.js')
+const loadEnv          = require('dotenv').config
+const logger           = require('./util/logger')
+const { slackbot }     = require('botkit')
+const events           = require('./lib/events.js')
+const patterns         = require('./lib/constants.js')
 // controllers
-const devCtrl = require('./controllers/dev')
+const devCtrl          = require('./controllers/dev')
 const presentationCtrl = require('./controllers/presentation')
-const dailyCtrl = require('./controllers/daily')
-const dyalnaCtrl = require('./controllers/dyalna')
+const dailyCtrl        = require('./controllers/daily')
+const dyalnaCtrl       = require('./controllers/dyalna')
+const jokesCtrl        = require('./controllers/jokes')
 
 // load loadEnv
 if (loadEnv().error)
@@ -48,5 +49,7 @@ controller.hears(patterns.WHOAMI, [events.MESSAGE_DIRECT, events.MENTION, events
 controller.hears(patterns.WEEKEND, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dailyCtrl.isItTheWeekend)
 // News
 controller.hears(patterns.NEWS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.news)
-
+//Jobs
 controller.hears(patterns.JOBS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.jobs)
+//Jokes
+controller.hears(patterns.JOKES, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], jokesCtrl)
