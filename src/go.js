@@ -9,6 +9,7 @@ const presentationCtrl = require('./controllers/presentation')
 const dailyCtrl        = require('./controllers/daily')
 const dyalnaCtrl       = require('./controllers/dyalna')
 const jokesCtrl        = require('./controllers/jokes')
+const scheduler        = require('./controllers/scheduler')
 
 // load loadEnv
 if (loadEnv().error)
@@ -32,7 +33,9 @@ const bot = controller.spawn({ token: process.env.API_TOKEN })
 // wake up the bot
 bot.startRTM(err => {
   logger.debug('Starting the bot')
-
+  // Starting the Job/News schedule
+  scheduler.news(bot)
+  scheduler.jobs(bot)
   if (err) {
     logger.fatal(err)
     throw new Error('Cannot connect to Slack!')

@@ -1308,6 +1308,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+node-cron@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/node-cron/-/node-cron-1.1.2.tgz#6f7f6e14e05f3885f8ebc6eee2882a6e17e6b9a7"
+
 node-uuid@^1.4.7, node-uuid@~1.4.3, node-uuid@~1.4.7:
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.7.tgz#6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f"
