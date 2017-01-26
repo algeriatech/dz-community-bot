@@ -9,9 +9,9 @@ const presentationCtrl = require('./controllers/presentation')
 const dailyCtrl        = require('./controllers/daily')
 const dyalnaCtrl       = require('./controllers/dyalna')
 const jokesCtrl        = require('./controllers/jokes')
-const scheduler        = require('./controllers/scheduler')
-const attitude         = require('./controllers/attitude')
-const location         = require('./controllers/location')
+const schedulerCtrl    = require('./controllers/scheduler')
+const attitudeCtrl     = require('./controllers/attitude')
+const locationCtrl     = require('./controllers/location')
 
 // load loadEnv
 if (loadEnv().error)
