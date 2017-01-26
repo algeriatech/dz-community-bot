@@ -75,6 +75,27 @@ Now you are able to make our community bot more intelligent .. GO GO GO :rocket:
 `npm run lint`
 2. Commit and push your changes, then open up a pull request :rocket:
 
+## Troubleshooting
+
+1. if you have this error :
+ 
+ `
+  Error: Cannot find module 'dotenv'
+      at Function.Module._resolveFilename (module.js:455:15)
+      at Function.Module._load (module.js:403:25)
+      at Module.require (module.js:483:17)
+      at require (internal/module.js:20:19)
+      at Object.<anonymous> (/Users/Amine/PersonalProject/dz-community-bot/src/go.js:1:79)
+      at Module._compile (module.js:556:32)
+      at Object.Module._extensions..js (module.js:565:10)
+      at Module.load (module.js:473:32)
+      at tryModuleLoad (module.js:432:12)
+      at Function.Module._load (module.js:424:3)
+  error Command failed with exit code 1. `
+  
+ Make sure you do an ` npm install ` or ` yarn install`. before running `yarn start` or `npm start`
+
+
 ## Useful links
 - [BotKit docs](https://github.com/howdyai/botkit/blob/master/readme-slack.md)
 - [Slack API docs](https://api.slack.com/)
