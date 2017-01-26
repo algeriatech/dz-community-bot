@@ -9,7 +9,7 @@ const presentationCtrl = require('./controllers/presentation')
 const dailyCtrl        = require('./controllers/daily')
 const dyalnaCtrl       = require('./controllers/dyalna')
 const jokesCtrl        = require('./controllers/jokes')
-const schedulerCtrl    = require('./controllers/scheduler')
+const scheduler        = require('./controllers/scheduler')
 const attitudeCtrl     = require('./controllers/attitude')
 const locationCtrl     = require('./controllers/location')
 
@@ -59,6 +59,6 @@ controller.hears(patterns.JOBS, [events.MESSAGE_DIRECT, events.MENTION, events.M
 //Jokes
 controller.hears(patterns.JOKES, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], jokesCtrl)
 //Attitude
-controller.hears(patterns.ATTITUDE, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], attitude.El9der)
+controller.hears(patterns.ATTITUDE, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], attitudeCtrl.El9der)
 //location
-controller.hears(patterns.LOCATION, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], location.WhereAreYou)
+controller.hears(patterns.LOCATION, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], locationCtrl.WhereAreYou)
