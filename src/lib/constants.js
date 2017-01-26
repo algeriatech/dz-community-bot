@@ -24,6 +24,14 @@ const JOKES = [
   /\b((e|a)(7|h)k(i|)li|jokes?|d(a|)(7|h)akni|(7|h)ajini|rire|blague|laught)\b/i,
 ]
 
+const LOCATION = [
+  /\b(win(e|)k|t('|)es ou|where (are|r) you|location|win(e|) rak)\b/i,
+]
+
+const ATTITUDE = [
+  /\b(idiot|stupid|(7|h)abes(s|))\b/i,
+]
+
 
 module.exports = {
   TOKEN,
@@ -33,4 +41,6 @@ module.exports = {
   NEWS,
   JOBS,
   JOKES,
+  LOCATION,
+  ATTITUDE,
 }

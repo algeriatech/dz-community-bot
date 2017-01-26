@@ -10,6 +10,8 @@ const dailyCtrl        = require('./controllers/daily')
 const dyalnaCtrl       = require('./controllers/dyalna')
 const jokesCtrl        = require('./controllers/jokes')
 const scheduler        = require('./controllers/scheduler')
+const attitude         = require('./controllers/attitude')
+const location         = require('./controllers/location')
 
 // load loadEnv
 if (loadEnv().error)
@@ -56,3 +58,7 @@ controller.hears(patterns.NEWS, [events.MESSAGE_DIRECT, events.MENTION, events.M
 controller.hears(patterns.JOBS, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], dyalnaCtrl.jobs)
 //Jokes
 controller.hears(patterns.JOKES, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], jokesCtrl)
+//Attitude
+controller.hears(patterns.ATTITUDE, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], attitude.El9der)
+//location
+controller.hears(patterns.LOCATION, [events.MESSAGE_DIRECT, events.MENTION, events.MENTION_DIRECT], location.WhereAreYou)
